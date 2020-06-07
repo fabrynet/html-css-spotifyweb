@@ -5,6 +5,8 @@
     <title>Spotify Web</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
@@ -13,12 +15,86 @@
 
       <!-- menu di navigazione -->
       <nav class="nav-bar">
+        <!-- nav-bar-top -->
         <div class="nav-bar-top">
-          <span class="title">Navbar Top</span>
+          <div id="logo">
+            <img src="spotify-assets/img/logo.svg" alt="Logo Spotify">
+          </div>
+          <div id="logo-small">
+            <img src="spotify-assets/img/logo-small.svg" alt="Logo Spotify">
+          </div>
+          <ul class="tools">
+            <li>
+              <div class="green-bar-v"></div>
+              <a href="#">
+                <img src="spotify-assets/img/home.svg" alt="Home">
+                <span class="nav-text">Home</span>
+              </a>
+            </li>
+            <li>
+              <div class="green-bar-v"></div>
+              <a href="#">
+                <img src="spotify-assets/img/search.svg" alt="Search">
+                <span class="nav-text">Cerca</span>
+              </a>
+            </li>
+            <li>
+              <div class="green-bar-v"></div>
+              <a href="#">
+                <img src="spotify-assets/img/libreria.svg" alt="Library">
+                <span class="nav-text">La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="playlist">
+            <div class="playlist-title uppercase">Playlist</div>
+            <a href="#" class="playlist-create"><i class="fas fa-plus-square"></i><span class="nav-text">Crea playlist</span></a>
+          </div>
+
+          <div class="playlist-list">
+            <ul>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
+        <!-- /nav-bar-top -->
+
         <div class="nav-bar-bottom">
-          <span class="title">Navbar Bottom</span>
+          <a href="#" id="download">
+            <img src="spotify-assets/img/download.svg" alt="Download">
+            <span class="nav-text">Installa app</span>
+          </a>
+          <hr>
+          <a href="#" id="profile">
+            <div>
+              <img src="spotify-assets/img/profile.svg" alt="Profile">
+            </div>
+            <span class="nav-text">John Doe</span>
+          </a>
         </div>
+
       </nav>
       <!-- /menu di navigazione -->
 
