@@ -24,9 +24,16 @@ i {
   background-color: #000;
 }
 .green-bar-h {
-  height: 3px;
+  height: 2px;
   width: 40px;
   background-color: #141922;
+}
+li:hover .green-bar-v,
+li:active .green-bar-v,
+li:hover .green-bar-h,
+li:active .green-bar-h {
+  background-color: #adff2f;
+  transition: 0.5s;
 }
 ul {
   list-style-type: none;
@@ -42,6 +49,7 @@ li, a {
 }
 a:hover {
   color: hsla(0,0%,100%,1);
+  transition: 0.5s;
   background-color:
 }
 a > img {
@@ -119,10 +127,6 @@ a > img {
 .tools > li a:active {
   background-color: #282828;
 }
-.tools > li:hover .green-bar-v,
-.tools > li:active .green-bar-v {
-  background-color: #adff2f;
-}
 
 .playlist {
   padding-left: 24px;
@@ -183,6 +187,7 @@ main {
   height: calc(100vh - 90px);
   float: left;
 }
+/* top bar */
 .top-bar {
   position: fixed;
   top: 0;
@@ -191,7 +196,23 @@ main {
   width: calc(100% - 230px);
   height: 60px;
   background-color: rgba(8,11,18,0.5);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
 }
+.upgrade {
+  margin-right: 30px;
+  padding: 7px 25px;
+  color: hsla(0,0%,100%,1);
+  border: 1px solid hsla(0,0%,100%,1);
+  border-radius: 30px;
+}
+.upgrade:hover {
+  transform: scale(1.1);
+}
+
+/* contenuti */
 .content {
   background-color: #141922;
   padding-top: 60px;
@@ -199,6 +220,21 @@ main {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+}
+#sections ul {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#sections ul li {
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#sections ul li a {
+  margin: 5px 10px 3px 10px;
 }
 
 /* barra di riproduzione nel footer */
@@ -252,6 +288,12 @@ main {
   main,
   .top-bar {
     width: calc(100% - 50px);
+  }
+  .top-bar {
+    justify-content: center;
+  }
+  .upgrade {
+    margin-right: 0;
   }
 
   #logo {
