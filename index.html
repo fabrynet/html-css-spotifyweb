@@ -17,30 +17,32 @@
       <nav class="nav-bar">
         <!-- nav-bar-top -->
         <div class="nav-bar-top">
+
           <div id="logo">
             <img src="spotify-assets/img/logo.svg" alt="Logo Spotify">
           </div>
           <div id="logo-small">
             <img src="spotify-assets/img/logo-small.svg" alt="Logo Spotify">
           </div>
+
           <ul class="tools">
-            <li>
+            <li class="v-center-row">
               <div class="green-bar-v"></div>
-              <a href="#">
+              <a href="#" class="v-center-row">
                 <img src="spotify-assets/img/home.svg" alt="Home">
                 <span class="nav-text">Home</span>
               </a>
             </li>
-            <li>
+            <li class="v-center-row">
               <div class="green-bar-v"></div>
-              <a href="#">
+              <a href="#" class="v-center-row">
                 <img src="spotify-assets/img/search.svg" alt="Search">
                 <span class="nav-text">Cerca</span>
               </a>
             </li>
-            <li>
+            <li class="v-center-row">
               <div class="green-bar-v"></div>
-              <a href="#">
+              <a href="#" class="v-center-row">
                 <img src="spotify-assets/img/libreria.svg" alt="Library">
                 <span class="nav-text">La tua libreria</span>
               </a>
@@ -49,32 +51,21 @@
 
           <div class="playlist">
             <div class="playlist-title uppercase">Playlist</div>
-            <a href="#" class="playlist-create"><i class="fas fa-plus-square"></i><span class="nav-text">Crea playlist</span></a>
+            <a href="#" class="v-center-row">
+              <i class="fas fa-plus-square"></i>
+              <span class="nav-text">Crea playlist</span>
+            </a>
           </div>
 
           <div class="playlist-list">
             <ul>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
-              <li>
-                <a href="#">Nome Playlist</a>
-              </li>
+              <li> <a href="#">Nome Playlist</a> </li>
+              <li> <a href="#">Nome Playlist</a> </li>
+              <li> <a href="#">Nome Playlist</a> </li>
+              <li> <a href="#">Nome Playlist</a> </li>
+              <li> <a href="#">Nome Playlist</a> </li>
+              <li> <a href="#">Nome Playlist</a> </li>
+              <li> <a href="#">Nome Playlist</a> </li>
             </ul>
           </div>
 
@@ -82,17 +73,17 @@
         <!-- /nav-bar-top -->
 
         <div class="nav-bar-bottom">
-          <a href="#" id="download">
+          <a href="#" id="download" class="v-center-row">
             <img src="spotify-assets/img/download.svg" alt="Download">
             <span class="nav-text">Installa app</span>
           </a>
           <hr>
-          <a href="#" id="profile">
+          <div href="#" id="profile" class="v-center-row">
             <div>
               <img src="spotify-assets/img/profile.svg" alt="Profile">
             </div>
             <span class="nav-text">John Doe</span>
-          </a>
+          </div>
         </div>
 
       </nav>
@@ -111,23 +102,23 @@
 
           <section id="sections">
             <ul class="uppercase">
-              <li>
+              <li class="h-center-column">
                 <a href="#">in evidenza</a>
                 <div class="green-bar-h"></div>
               </li>
-              <li>
+              <li class="h-center-column">
                 <a href="#">podcast</a>
                 <div class="green-bar-h"></div>
               </li>
-              <li>
+              <li class="h-center-column">
                 <a href="#">classifiche</a>
                 <div class="green-bar-h"></div>
               </li>
-              <li>
+              <li class="h-center-column">
                 <a href="#">generi e mood</a>
                 <div class="green-bar-h"></div>
               </li>
-              <li>
+              <li class="h-center-column">
                 <a href="#">scopri</a>
                 <div class="green-bar-h"></div>
               </li>
@@ -136,13 +127,217 @@
 
           <section id="recently">
 
+            <h2>Recently played</h2>
+
+            <div class="row-card">
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/metal_lifting.jpg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Heavy Metal
+                </div>
+                <div class="card-subtitle">
+                  Subtitle
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/stranger.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)
+                </div>
+                <div class="card-subtitle">
+                  Kyle Dixon &amp; Michael Stein
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/aquietplace.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  A quiet place
+                </div>
+                <div class="card-subtitle">
+                  Subtitle
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/split.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Split
+                </div>
+                <div class="card-subtitle">
+                  Subtitle
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/cure.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  A cure for wellness
+                </div>
+                <div class="card-subtitle">
+                  Subtitle
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/sinister.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Sinister
+                </div>
+                <div class="card-subtitle">
+                  Subtitle
+                </div>
+              </a>
+
+            </div>
+
           </section>
 
           <section id="created">
 
+            <h2>Creato per John Doe</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti</p>
+
+            <div class="row-card">
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/radar.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Release Radar
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/mixdaily.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Daily Mix 1
+                </div>
+              </a>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+            </div>
+
           </section>
 
           <section id="artists">
+
+            <h2>Artisti più popolari</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti</p>
+
+            <div class="row-card">
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/youg.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Lana del Rey
+                </div>
+              </a>
+
+              <a href="#" class="card h-center-column">
+                <div class="card-img">
+                  <div class="layover"></div>
+                  <span class="card-play"><i class="far fa-play-circle"></i></span>
+                  <img src="spotify-assets/img/einaudi.jpeg" alt="Metal Lifting">
+                </div>
+                <div class="card-title">
+                  Ludovico Einaudi
+                </div>
+              </a>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+              <span href="#" class="card h-center-column">
+                <div class="card-img">
+                </div>
+                <div class="card-title">
+                </div>
+              </span>
+
+            </div>
 
           </section>
         </div>
