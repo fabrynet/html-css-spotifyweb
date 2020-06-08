@@ -21,7 +21,7 @@ h2 {
   color: hsla(0,0%,100%,1);
 }
 i {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .uppercase {
   text-transform: uppercase;
@@ -75,13 +75,21 @@ a > img {
 .nav-text {
   padding-left: 10px;
 }
+.layover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8,11,18,0.5);
+  opacity: 0;
+}
+
 /* regole di debug */
-.title {
+/* .title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 /* /regole di debug */
 
 /* clearfix del wrapper */
@@ -147,6 +155,9 @@ a > img {
 .playlist {
   padding-left: 24px;
   padding-bottom: 15px;
+}
+.playlist > a i {
+  font-size: 2.5em;
 }
 .playlist-title {
   padding-bottom: 15px;
@@ -264,13 +275,6 @@ main {
 .card-img {
   position: relative;
 }
-.layover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(8,11,18,0.5);
-  opacity: 0;
-}
 .card-play {
   font-size: 2em;
   position: absolute;
@@ -294,24 +298,10 @@ main {
   color: hsla(0,0%,100%,1);
   padding: 10px 0;
 }
-/* #artists .card {
-  flex-basis: 200px;
-  width: 100%;
-}
-#artists .card:first-of-type .card-img {
-  background-image: url("../spotify-assets/img/youg.jpeg");
+#artists img,
+#artists .layover {
   border-radius: 50%;
 }
-#artists .card:first-of-type .layover {
-  border-radius: 50%;
-}
-#artists .card:last-of-type .card-img {
-  background-image: url("../spotify-assets/img/einaudi.jpeg");
-  border-radius: 50%;
-}
-#artists .card:last-of-type .layover {
-  border-radius: 50%;
-} */
 
 /* barra di riproduzione nel footer */
 .play-bar {
@@ -322,29 +312,159 @@ main {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
+/* play bar sinistra */
 .play-bar-left {
   flex-basis: 300px;
   flex-shrink: 1;
+  padding: 0 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   /* debug */
-  position: relative;
+  /* position: relative;
   background-color: pink;
-  border: 1px solid white;
+  border: 1px solid white; */
 }
+.play-bar-left .left {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.play-bar-left .left > a img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.track-title div:first-of-type {
+  color: hsla(0,0%,100%,1);
+  font-size: 14px;
+}
+.play-bar-left .right {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.play-bar-left .right i {
+  padding-left: 15px;
+  font-size: 1.5em;
+}
+
+/* play bar centrale */
 .play-bar-center {
-  flex-basis: 600px;
+  flex-basis: 700px;
   flex-shrink: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   /* debug */
-  position: relative;
+  /* position: relative;
   background-color: pink;
-  border: 1px solid white;
+  border: 1px solid white; */
 }
+.player-controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  width: 30%;
+}
+.player-controls i {
+  font-size: 1.2em;
+  margin: 0 5px;
+}
+#play {
+  font-size: 2em;
+}
+.progress-control {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.progress-bar {
+  width: 90%;
+  height: 6px;
+  position: relative;
+  background-color: hsla(0,0%,100%,.3);
+  border-radius: 3px;
+}
+.progress-bar:hover {
+  cursor: pointer;
+}
+.progress-bar:hover .cursor {
+  background-color: #adff2f;
+}
+.progress-bar:hover .circle {
+  display: block;
+}
+.cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: hsla(0,0%,100%,.5);
+  width: 30%;
+  height: 100%;
+  border-radius: 3px;
+}
+.circle {
+  width: 14px;
+  height: 14px;
+  background-color: hsla(0,0%,100%,1);
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+
+/* play bar destra */
 .play-bar-right {
   flex-basis: 300px;
   flex-shrink: 1;
+  padding: 0 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
   /* debug */
-  position: relative;
+  /* position: relative;
   background-color: pink;
-  border: 1px solid white;
+  border: 1px solid white; */
+}
+.play-bar-right i {
+  /* padding-right: 15px; */
+  font-size: 1.2em;
+}
+.play-bar-right .controls {
+  width: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/* .play-bar-right .controls a {
+  margin: 5px;
+} */
+.play-bar-right .volume {
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.play-bar-right .volume > a {
+  padding: 5px;
+}
+.play-bar-right .volume .progress-bar {
+  width: 120px;
 }
 
 /* media query */
