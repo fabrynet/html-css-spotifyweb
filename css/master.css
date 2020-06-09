@@ -154,6 +154,11 @@ a > img {
 } */
 /* /regole di debug */
 
+/* wrapper */
+.wrapper {
+  height: calc(100vh - 90px);
+  display: flex;
+}
 /* clearfix del wrapper */
 .wrapper:after {
   content: "";
@@ -165,10 +170,9 @@ a > img {
 .nav-bar {
   background-color: #000;
   width: 230px;
-  height: calc(100vh - 90px);
-  float: left;
+  height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -176,10 +180,13 @@ a > img {
 
 /* nav-bar top */
 .nav-bar-top {
+  flex-basis: calc(100% - 90px);
   flex-shrink: 1;
   width: 100%;
   padding: 24px 9px 0 9px;
   font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   /* debug */
   /* position: relative;
   background-color: pink;
@@ -197,7 +204,7 @@ a > img {
   height: 30px;
   display: none;
 }
-
+/* tools */
 .tools {
   margin-bottom: 18px;
   flex-shrink: 0;
@@ -212,7 +219,7 @@ a > img {
 .tools > li a:active {
   background-color: #282828;
 }
-
+/* playlist */
 .playlist {
   padding-left: 15px;
   padding-bottom: 15px;
@@ -227,7 +234,8 @@ a > img {
 }
 .playlist-list {
   padding-left: 15px;
-  flex-shrink: 1;
+  height: calc(100% - 280px);
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .playlist-list li {
@@ -278,8 +286,7 @@ a > img {
 /* parte principale con top-bar e contenuti */
 main {
   width: calc(100% - 230px);
-  height: calc(100vh - 90px);
-  float: left;
+  height: 100%;
   background-color: #141922;
 }
 /* top bar */
@@ -363,6 +370,9 @@ main {
   font-weight: bold;
   color: hsla(0,0%,100%,1);
   padding: 10px 0;
+}
+.card-title:hover {
+  text-decoration: underline;
 }
 #artists img,
 #artists .layover {
