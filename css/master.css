@@ -145,6 +145,24 @@ a > img {
   background: hsla(0,0%,100%,1);
 }
 
+/* animations */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* regole di debug */
 /* .title {
   position: absolute;
@@ -248,6 +266,8 @@ a > img {
   flex-basis: 90px;
   flex-shrink: 0;
   padding: 0 24px;
+  display: flex;
+  flex-flow: column nowrap;
   /* debug */
   /* position: relative;
   height: 50px;
@@ -344,6 +364,7 @@ main {
   flex-basis: calc((100% / 6) - 20px);
   flex-shrink: 1;
   margin-right: 20px;
+  animation: fade-in 2s;
 }
 .card-img {
   position: relative;
