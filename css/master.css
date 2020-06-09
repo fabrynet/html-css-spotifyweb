@@ -34,6 +34,7 @@ i {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 .h-center-column {
   display: flex;
@@ -42,6 +43,8 @@ i {
   align-items: center;
 }
 .green-bar-v {
+  position: absolute;
+  left: -9px;
   height: 40px;
   width: 3px;
   background-color: #000;
@@ -127,7 +130,7 @@ a > img {
 
 /* customizzazione Scrollbar  */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 /* scrollbar track */
 ::-webkit-scrollbar-track {
@@ -136,7 +139,6 @@ a > img {
 /* scrollbar handle */
 ::-webkit-scrollbar-thumb {
   background: hsla(0,0%,100%,.5);
-  border-radius: 5px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
@@ -169,11 +171,13 @@ a > img {
 
 /* nav-bar top */
 .nav-bar-top {
-  height: calc(100% - 80px);
+  height: calc(100% - 90px);
   width: 100%;
+  padding: 24px 9px 0 9px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  font-size: 14px;
   /* debug */
   /* position: relative;
   background-color: pink;
@@ -181,7 +185,7 @@ a > img {
 }
 #logo {
   height: 40px;
-  margin: 24px 0 18px 24px;
+  margin: 0 0 18px 15px;
 }
 #logo img,
 #logo-small img {
@@ -199,8 +203,7 @@ a > img {
 .tools > li a {
   height: 40px;
   width: 100%;
-  padding: 0 16px;
-  margin: 0 8px 0 5px;
+  padding: 0 15px;
   border-radius: 4px;
 }
 .tools > li a:hover,
@@ -209,7 +212,7 @@ a > img {
 }
 
 .playlist {
-  padding-left: 24px;
+  padding-left: 15px;
   padding-bottom: 15px;
 }
 .playlist > a i {
@@ -218,10 +221,10 @@ a > img {
 .playlist-title {
   padding-bottom: 15px;
   color: hsla(0,0%,100%,1);
-  font-size: 14px;
+  font-size: 16px;
 }
 .playlist-list {
-  padding-left: 24px;
+  padding-left: 15px;
   flex-shrink: 1;
   flex-grow: 1;
   overflow-y: auto;
@@ -233,8 +236,8 @@ a > img {
 
 /* nav-bar bottom */
 .nav-bar-bottom {
-  height: 80px;
-  padding: 0 24px 0 24px;
+  height: 90px;
+  padding: 0 24px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -245,7 +248,7 @@ a > img {
   border: 1px solid white; */
 }
 #download {
-  padding-bottom: 5px;
+  padding: 5px 0;
   border-bottom: 1px solid hsla(0,0%,100%,.5);
 }
 #download img {
@@ -319,6 +322,7 @@ main {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 #sections ul li a {
   margin: 5px 10px 3px 10px;
@@ -339,11 +343,11 @@ main {
   position: relative;
 }
 .card-play {
-  font-size: 2em;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  font-size: 3em;
   opacity: 0;
 }
 .card-img:hover .layover,
@@ -356,7 +360,7 @@ main {
 }
 .card-title {
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   color: hsla(0,0%,100%,1);
   padding: 10px 0;
@@ -402,7 +406,7 @@ main {
 }
 .track-title div:first-of-type {
   color: hsla(0,0%,100%,1);
-  font-size: 14px;
+  font-size: 16px;
 }
 .play-bar-left .right {
   display: flex;
@@ -509,6 +513,9 @@ main {
   .nav-bar-top,
   .nav-bar-bottom {
     align-items: center;
+  }
+  #download {
+    border-bottom: 0;
   }
   .nav-text,
   .playlist,
