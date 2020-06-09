@@ -167,6 +167,8 @@ a > img {
   width: 230px;
   height: calc(100vh - 90px);
   float: left;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* nav-bar top */
@@ -542,11 +544,11 @@ main {
   }
 }
 
-@media all and (max-height: 500px) {
+/* @media all and (max-height: 500px) {
   .nav-bar-top {
     height: 100%;
   }
   .nav-bar-bottom {
     display: none;
   }
-}
+} */
