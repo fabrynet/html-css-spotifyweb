@@ -177,12 +177,6 @@ a > img {
   height: calc(100vh - 90px);
   display: flex;
 }
-/* clearfix del wrapper */
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 /* menu di navigazione laterale */
 .nav-bar {
