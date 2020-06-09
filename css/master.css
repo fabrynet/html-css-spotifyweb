@@ -180,13 +180,14 @@ a > img {
 
 /* nav-bar top */
 .nav-bar-top {
-  flex-basis: calc(100% - 90px);
-  flex-shrink: 1;
   width: 100%;
   padding: 24px 9px 0 9px;
   font-size: 14px;
   overflow-x: hidden;
   overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   /* debug */
   /* position: relative;
   background-color: pink;
@@ -234,7 +235,6 @@ a > img {
 }
 .playlist-list {
   padding-left: 15px;
-  height: calc(100% - 280px);
   overflow-x: hidden;
   overflow-y: auto;
 }
