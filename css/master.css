@@ -61,6 +61,12 @@ li:active .green-bar-h {
   background-color: #adff2f;
   transition: 0.5s;
 }
+li:hover .green-bar-h {
+  animation: expansion-green-bar-h 0.5s;
+}
+li:hover .green-bar-v {
+  animation: expansion-green-bar-v 0.5s;
+}
 ul {
   list-style-type: none;
 }
@@ -100,11 +106,13 @@ a > img {
 }
 .progress-bar:hover .cursor {
   background-color: #adff2f;
-  transition: 0.5s;
+  transition: 1s;
+  animation: slide 1s;
 }
 .progress-bar:hover .circle {
   opacity: 1;
-  transition: 0.5s;
+  transition: 1s;
+  animation: slide-circle 1s;
 }
 .cursor {
   position: absolute;
@@ -160,6 +168,46 @@ a > img {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes slide-circle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 30%;
+  }
+}
+@keyframes expansion-green-bar-h {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40px;
+  }
+}
+@keyframes expansion-green-bar-v {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes expansion-green-bar-v {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
   }
 }
 
@@ -370,6 +418,11 @@ main {
   transform: translate(-50%,-50%);
   font-size: 3em;
   opacity: 0;
+}
+.card-img:hover {
+  transform: scale(1.1);
+  z-index: 999;
+  transition: transform 0.5s;
 }
 .card-img:hover .layover,
 .card-img:hover .card-play {
