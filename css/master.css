@@ -211,19 +211,22 @@ a > img {
   }
 }
 
-/* regole di debug */
-/* .title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-/* /regole di debug */
+/* regole per struttura webapp */
 
 /* wrapper */
 .wrapper {
-  height: calc(100vh - 90px);
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-flow: column nowrap;
+}
+/* parte principale con nav-bar e contenuti */
+main {
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: #141922;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 /* menu di navigazione laterale */
@@ -237,17 +240,22 @@ a > img {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.container {
+  width: calc(100% - 230px);
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
 
 /* nav-bar top */
 .nav-bar-top {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
   padding: 24px 9px 0 9px;
   font-size: 14px;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   /* debug */
   /* position: relative;
   background-color: pink;
@@ -345,20 +353,10 @@ a > img {
 }
 /* /nav-bar bottom */
 
-/* parte principale con top-bar e contenuti */
-main {
-  width: calc(100% - 230px);
-  height: 100%;
-  background-color: #141922;
-}
 /* top bar */
 .top-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: calc(100% - 230px);
-  height: 60px;
+  flex-basis: 60px;
+  flex-shrink: 0;
   background-color: rgba(8,11,18,0.5);
   display: flex;
   flex-flow: row nowrap;
@@ -378,8 +376,6 @@ main {
 
 /* contenuti */
 .content {
-  margin-top: 60px;
-  width: 100%;
   height: calc(100% - 60px);
   overflow-x: hidden;
   overflow-y: auto;
@@ -448,17 +444,14 @@ main {
 }
 
 /* barra di riproduzione nel footer */
-.play-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
+footer.play-bar {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   background-color: #282828;
   width: 100%;
-  height: 90px;
+  flex-basis: 90px;
+  flex-shrink: 0;
 }
 /* play bar sinistra */
 .play-bar-left {
@@ -571,7 +564,7 @@ main {
   padding: 5px;
 }
 .play-bar-right .volume .progress-bar {
-  width: 120px;
+  width: 90%;
 }
 
 /* media query */
@@ -603,8 +596,7 @@ main {
   .playlist-list {
     display: none;
   }
-  main,
-  .top-bar {
+  .container {
     width: calc(100% - 50px);
   }
   .top-bar {
@@ -622,12 +614,3 @@ main {
     margin-bottom: 20px;
   }
 }
-
-/* @media all and (max-height: 500px) {
-  .nav-bar-top {
-    height: 100%;
-  }
-  .nav-bar-bottom {
-    display: none;
-  }
-} */
