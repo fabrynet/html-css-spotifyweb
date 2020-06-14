@@ -16,11 +16,14 @@ body {
 section {
   padding: 0 20px 0 0;
 }
-h2 {
+section h2 {
   font-size: 30px;
-  margin: 10px 0;
+  margin: 10px 20px;
   font-weight: bold;
   color: hsla(0,0%,100%,1);
+}
+section p {
+  margin: 0 20px;
 }
 i {
   font-size: 1.5em;
@@ -381,7 +384,7 @@ main {
   overflow-y: auto;
 }
 #sections ul {
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -402,6 +405,7 @@ main {
   flex-basis: calc((100% / 6) - 20px);
   flex-shrink: 1;
   margin-left: 20px;
+  margin-bottom: 20px;
   animation: fade-in 2s;
 }
 .card-img {
